@@ -45,7 +45,7 @@ public class NewsAdapter extends RecyclerAdapter<NewsEntity> {
                 .setText(R.id.tv_sourceName, "来源：" + item.getSource_name())
                 .getItemView().setOnClickListener(v ->
                 ActivityUtil.start(mContext, WebViewActivity.class, RetrofitClient.URL_BASE_NEWS + item.getUrl()));
-        if (!img.isEmpty()) {
+        if (img!=null&&!img.isEmpty()) {
             if (type == TMPELATE_ONE_BIG_PIC || type == TMPELATE_ONE_SAMLL_PIC) {
                 helper.setImageUrl(R.id.iv_thumb, img.get(0).getUrl(), false);
             } else if (type == TMPELATE_THREE_SMALL_PIC && img.size() == 3) {
