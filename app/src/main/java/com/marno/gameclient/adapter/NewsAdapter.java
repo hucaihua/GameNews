@@ -29,6 +29,7 @@ public class NewsAdapter extends RecyclerAdapter<NewsEntity> {
     public NewsAdapter(Context context) {
         this(context, R.layout.item_news_template5, R.layout.item_news_template4,
                 R.layout.item_news_template3, R.layout.item_news_template1);
+        this.mContext = context;
     }
 
     public NewsAdapter(Context context, @NonNull int... layoutResIds) {

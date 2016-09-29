@@ -52,28 +52,28 @@ public class RetrofitClient {
      * 新闻
      */
     public static RetrofitClient getNewsIns() {
-        if (sVideoClient == null) {
+        if (sNewsClient == null) {
             synchronized (RetrofitClient.class) {
-                if (sVideoClient == null) {
-                    sVideoClient = new RetrofitClient(1);
+                if (sNewsClient == null) {
+                    sNewsClient = new RetrofitClient(1);
                 }
             }
         }
-        return sVideoClient;
+        return sNewsClient;
     }
 
     /**
      * 视频
      */
     public static RetrofitClient getVideoIns() {
-        if (sNewsClient == null) {
+        if (sVideoClient == null) {
             synchronized (RetrofitClient.class) {
-                if (sNewsClient == null) {
-                    sNewsClient = new RetrofitClient(2);
+                if (sVideoClient == null) {
+                    sVideoClient = new RetrofitClient(2);
                 }
             }
         }
-        return sNewsClient;
+        return sVideoClient;
     }
 
     /**
